@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Αντρέας & Αίμιλη</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: "Georgia", serif;
+      background:#faf7f5;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+
+    .container{
+      max-width:800px;
+      margin:auto;
+    }
+
+    .header{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .names{
+      font-size:52px;
+      color:#7b5b4f;
+      margin-bottom:10px;
+    }
+
+    .date{
+      font-size:24px;
+      color:#9b7e73;
+    }
+
+    .cards{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      padding:20px;
+      display:flex;
+      align-items:center;
+      gap:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img{
+      width:60px;
+      height:60px;
+      object-fit:contain;
+    }
+
+    .info{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .title{
+      font-size:22px;
+      color:#7b5b4f;
+      font-weight:bold;
+    }
+
+    .time{
+      font-size:18px;
+      color:#666;
+      margin-top:5px;
+    }
+
+    @media(max-width:600px){
+
+      .names{
+        font-size:38px;
+      }
+
+      .card{
+        padding:15px;
+      }
+
+      .card img{
+        width:50px;
+        height:50px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1 class="names">Αντρέας & Αίμιλη</h1>
+    <div class="date">15 / 05 / 2027</div>
+  </div>
+
+  <div class="cards">
+
+    <div class="card"
+         onclick="window.open('https://maps.app.goo.gl/xVWDbEHrjbfaNytTA', '_blank')">
+      <img src="src/heel.png" alt="Σπίτι Νύφης">
+      <div class="info">
+        <div class="title">Σπίτι Νύφης</div>
+        <div class="time">16:00</div>
+      </div>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://maps.app.goo.gl/aDp35n5ZPqX2ANM38', '_blank')">
+      <img src="src/bow.avif" alt="Σπίτι Γαμπρού">
+      <div class="info">
+        <div class="title">Σπίτι Γαμπρού</div>
+        <div class="time">17:00</div>
+      </div>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://maps.app.goo.gl/5vALMq5dbsiS21Y19', '_blank')">
+      <img src="src/church.jpg" alt="Εκκλησία">
+      <div class="info">
+        <div class="title">Εκκλησία</div>
+        <div class="time">18:00</div>
+      </div>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://maps.app.goo.gl/NrkBtfB4Sunmd9PT8', '_blank')">
+      <img src="src/glasses.jpg" alt="Δεξίωση">
+      <div class="info">
+        <div class="title">Δεξίωση</div>
+        <div class="time">20:00</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
