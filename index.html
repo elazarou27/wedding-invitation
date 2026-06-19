@@ -3,156 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ανδρέας & Αίμιλη</title>
 
-  <title>Αντρέας & Αίμιλη</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    *{ margin:0; padding:0; box-sizing:border-box; }
 
     body{
-      font-family: "Georgia", serif;
-      background:#faf7f5;
+      font-family:"Georgia", serif;
+      background:#cdc8bc;
+      color:#5c5c4d;
       min-height:100vh;
       padding:40px 20px;
     }
 
-    .container{
-      max-width:800px;
+    .frame-wrap{
+      max-width:700px;
       margin:auto;
+      position:relative;
+      padding:90px 50px 60px;
+    }
+
+    .frame-svg{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .content{
+      position:relative;
+      z-index:1;
     }
 
     .header{
       text-align:center;
-      margin-bottom:50px;
+      margin-bottom:55px;
     }
 
     .names{
-      font-size:52px;
-      color:#7b5b4f;
-      margin-bottom:10px;
+      font-family:"Cormorant Garamond", serif;
+      font-style:italic;
+      font-weight:600;
+      font-size:50px;
+      color:#5c5c4d;
+      margin-bottom:8px;
     }
 
     .date{
-      font-size:24px;
-      color:#9b7e73;
+      font-size:18px;
+      letter-spacing:3px;
+      color:#7a7a68;
     }
 
     .cards{
-      display:flex;
-      flex-direction:column;
-      gap:20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      row-gap:50px;
+      column-gap:20px;
     }
 
     .card{
-      background:white;
-      border-radius:18px;
-      padding:20px;
-      display:flex;
-      align-items:center;
-      gap:20px;
-      box-shadow:0 4px 15px rgba(0,0,0,0.08);
-      transition:0.3s;
-      cursor:pointer;
+      text-align:center;
     }
 
-    .card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .card img{
+    .card svg.icon{
       width:60px;
       height:60px;
-      object-fit:contain;
-    }
-
-    .info{
-      display:flex;
-      flex-direction:column;
+      margin-bottom:14px;
+      stroke:#5c5c4d;
     }
 
     .title{
-      font-size:22px;
-      color:#7b5b4f;
+      font-size:16px;
+      letter-spacing:1px;
       font-weight:bold;
+      text-transform:uppercase;
+      margin-bottom:10px;
     }
 
     .time{
-      font-size:18px;
-      color:#666;
-      margin-top:5px;
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .location-link{
+      font-size:13px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:#5c5c4d;
+      text-decoration:underline;
+      cursor:pointer;
+      background:none;
+      border:none;
+      font-family:inherit;
     }
 
     @media(max-width:600px){
-
-      .names{
-        font-size:38px;
-      }
-
-      .card{
-        padding:15px;
-      }
-
-      .card img{
-        width:50px;
-        height:50px;
-      }
-
+      .frame-wrap{ padding:70px 25px 40px; }
+      .names{ font-size:34px; }
+      .cards{ row-gap:35px; }
+      .card svg.icon{ width:48px; height:48px; }
     }
-
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="frame-wrap">
 
-  <div class="header">
-    <h1 class="names">Αντρέας & Αίμιλη</h1>
-    <div class="date">15 / 05 / 2027</div>
-  </div>
+  <!-- Decorative wavy frame + bow -->
+  <svg class="frame-svg" viewBox="0 0 700 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="
+      M 60 140
+      C 30 200, 30 260, 55 320
+      C 78 375, 35 420, 55 480
+      C 75 535, 30 590, 58 650
+      C 80 700, 40 750, 65 800
+      C 85 845, 60 870, 110 880
+      C 200 900, 280 865, 360 880
+      C 440 895, 520 865, 590 880
+      C 630 888, 655 850, 645 800
+      C 630 745, 660 700, 640 650
+      C 622 600, 660 545, 638 490
+      C 620 440, 658 385, 636 330
+      C 620 285, 650 230, 630 170
+      C 615 130, 580 105, 530 100
+      C 470 95, 440 120, 390 102
+      C 350 88, 350 88, 310 102
+      C 260 120, 230 95, 170 100
+      C 120 105, 80 110, 60 140
+      Z"
+          fill="none" stroke="#5c5c4d" stroke-width="6" stroke-linecap="round"/>
 
-  <div class="cards">
+    <!-- Bow -->
+    <g transform="translate(350,55)" stroke="#5c5c4d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 0 5 C -25 -25, -75 -25, -95 0 C -110 18, -90 35, -55 25 C -30 18, -15 8, 0 5 Z"/>
+      <path d="M 0 5 C 25 -25, 75 -25, 95 0 C 110 18, 90 35, 55 25 C 30 18, 15 8, 0 5 Z"/>
+      <path d="M -10 8 C -25 35, -35 60, -28 90"/>
+      <path d="M 10 8 C 25 35, 35 60, 28 90"/>
+      <circle cx="0" cy="6" r="7" fill="#5c5c4d" stroke="none"/>
+    </g>
+  </svg>
 
-    <div class="card"
-         onclick="window.open('https://maps.app.goo.gl/xVWDbEHrjbfaNytTA', '_blank')">
-      <img src="src/heel.png" alt="Σπίτι Νύφης">
-      <div class="info">
-        <div class="title">Σπίτι Νύφης</div>
-        <div class="time">16:00</div>
-      </div>
+  <div class="content">
+
+    <div class="header">
+      <h1 class="names">Ανδρέας &amp; Αίμιλη</h1>
+      <div class="date">15 / 05 / 2027</div>
     </div>
 
-    <div class="card"
-         onclick="window.open('https://maps.app.goo.gl/aDp35n5ZPqX2ANM38', '_blank')">
-      <img src="src/bow.avif" alt="Σπίτι Γαμπρού">
-      <div class="info">
+    <div class="cards">
+
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke-width="2"><path d="M32 8 L20 18 L14 56 L50 56 L44 18 Z"/><path d="M28 18 L32 26 L36 18"/><path d="M20 18 L28 30 L24 56"/><path d="M44 18 L36 30 L40 56"/></svg>
         <div class="title">Σπίτι Γαμπρού</div>
-        <div class="time">17:00</div>
+        <div class="time">12:30</div>
+        <button class="location-link" onclick="window.open('https://maps.app.goo.gl/aDp35n5ZPqX2ANM38', '_blank')">Τοποθεσία</button>
       </div>
-    </div>
 
-    <div class="card"
-         onclick="window.open('https://maps.app.goo.gl/5vALMq5dbsiS21Y19', '_blank')">
-      <img src="src/church.jpg" alt="Εκκλησία">
-      <div class="info">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke-width="2"><path d="M22 44 C18 38 18 30 24 24 C30 18 38 18 40 24 L46 50 C47 54 44 58 40 58 L26 58 C22 58 19 54 20 50 Z"/><path d="M40 24 L52 18"/><path d="M24 24 L14 20"/></svg>
+        <div class="title">Σπίτι Νύφης</div>
+        <div class="time">14:30</div>
+        <button class="location-link" onclick="window.open('https://maps.app.goo.gl/xVWDbEHrjbfaNytTA', '_blank')">Τοποθεσία</button>
+      </div>
+
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke-width="2"><circle cx="24" cy="30" r="14"/><circle cx="38" cy="38" r="14"/></svg>
         <div class="title">Εκκλησία</div>
-        <div class="time">18:00</div>
+        <div class="time">17:00</div>
+        <button class="location-link" onclick="window.open('https://maps.app.goo.gl/5vALMq5dbsiS21Y19', '_blank')">Τοποθεσία</button>
       </div>
-    </div>
 
-    <div class="card"
-         onclick="window.open('https://maps.app.goo.gl/NrkBtfB4Sunmd9PT8', '_blank')">
-      <img src="src/glasses.jpg" alt="Δεξίωση">
-      <div class="info">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke-width="2"><path d="M22 10 L26 36 C26 42 32 44 32 44 C32 44 38 42 38 36 L42 10 Z"/><line x1="32" y1="44" x2="32" y2="56"/><line x1="24" y1="56" x2="40" y2="56"/></svg>
         <div class="title">Δεξίωση</div>
-        <div class="time">20:00</div>
+        <div class="time">19:30</div>
+        <button class="location-link" onclick="window.open('https://maps.app.goo.gl/NrkBtfB4Sunmd9PT8', '_blank')">Τοποθεσία</button>
       </div>
+
     </div>
 
   </div>
